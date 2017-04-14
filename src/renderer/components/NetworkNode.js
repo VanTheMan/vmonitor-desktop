@@ -2,7 +2,6 @@ import React, { PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import electron from 'electron';
 const ipcRenderer = electron.ipcRenderer;
-const d3 = require('d3');
 
 const propTypes = {
     cx:PropTypes.number,
@@ -16,7 +15,7 @@ const defaultProps = {
     status : 0
 };
 
-class Node extends React.Component{
+class NetworkNode extends React.Component{
     constructor(props){
         super(props);
         this.onDoubleClickHandle = this.onDoubleClickHandle.bind(this);
@@ -53,7 +52,7 @@ class Node extends React.Component{
     }
 }
 
-Node.propTypes = propTypes;
-Node.defaultProps = defaultProps;
+NetworkNode.propTypes = propTypes;
+NetworkNode.defaultProps = defaultProps;
 
-export default Node;
+export default NetworkNode;

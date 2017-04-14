@@ -1,6 +1,6 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
-import App from './pages/App';
+import App from '../components/App';
 
 ReactDOM.render(
     <App />, 

@@ -11,7 +11,9 @@
   "license": "ISC",
   "dependencies": {
     "application-config": "^1.0.1",
+    "bootstrap": "^3.3.7",
     "d3": "^4.7.3",
+    "jquery": "^3.2.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
   },

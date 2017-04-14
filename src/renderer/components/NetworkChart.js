@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import ReactDOM from 'react-dom';
-import Node from './Node';
+import NetworkNode from './NetworkNode';
 import Link from './Link';
 const d3 = require('d3');
 import electron from 'electron';
@@ -76,7 +76,7 @@ class NetworkChart extends React.Component{
                     />
                 )}
                 {this.props.nodes.map((node, index) =>
-                    <Node 
+                    <NetworkNode 
                         r={node.r} 
                         cx={node.x} 
                         cy={node.y} 

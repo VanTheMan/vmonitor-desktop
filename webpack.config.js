@@ -1,11 +1,13 @@
+var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
-  entry: [
-        path.join(__dirname, 'src/renderer/main.js'),
-  ],
+  entry: {
+        main: path.join(__dirname, 'src/renderer/pages/main.js'),
+        detail: path.join(__dirname, 'src/renderer/pages/detail.js')
+  },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'build')
   },
   module: {
@@ -59,5 +61,11 @@ module.exports = {
         }
     ]
   },
+  plugins: [
+      new webpack.ProvidePlugin({
+          $: 'jquery',
+          jQuery: 'jquery'
+      })  
+  ],
   target: 'electron-main'
 };

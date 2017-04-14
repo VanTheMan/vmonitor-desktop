@@ -22,6 +22,15 @@ function init(options){
     });
 
     window.loadURL(config.WINDOW_DETAIL);
+    window.setMenu(null);
+
+    window.once('close', function(){
+        detail.window = null;
+    });
+
+    window.once('ready-to-show', function () {
+        window.show()
+    });
 }
 
 function show(){

@@ -10,13 +10,11 @@ app.on('ready', createWindow);
 function createWindow(){
     windows.main.init();
     windows.main.show();
-    windows.detail.init();
-    windows.detail.hide();
 }; 
 
 ipcMain.on('doubleClickNode', function(event, arg){
-    console.log("show window detail node " + arg);
-    windows.detail.show();
+    console.log("show window detail node " + arg);    
+    windows.detail.init();
 });
 
 ipcMain.on('request-data', (event, arg) =>{

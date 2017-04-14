@@ -1,5 +1,5 @@
 import React from 'react';
-import NetworkChart from '../components/NetworkChart';
+import NetworkChart from './NetworkChart';
 import electron from 'electron';
 const ipcRenderer = electron.ipcRenderer;
 
